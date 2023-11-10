@@ -8,6 +8,7 @@ const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 const app = express();
 
+require('dotenv').config();
 
 function authenticateTokenMiddleware(req, res, next) {
   const authHeader = req.headers["authorization"];
